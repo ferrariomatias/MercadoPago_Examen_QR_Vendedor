@@ -5,7 +5,7 @@
 header('Content-type: application/json');
 
 include_once '../../global/functions.php';
-global $access_token;	
+global $access_token;
 
  // REVISA AQUÍ:
  // Qué método y endpoint de la API de Mercado Pago deberías poner aquí para poder   
@@ -14,9 +14,9 @@ global $access_token;
 
 
 $external_id = $_REQUEST["external_id"];
-$url="";
+$url="https://api.mercadopago.com/pos";
 
 
-curl_call("put","$url?external_id=$external_id&access_token=$access_token","");
+curl_call("GET","$url?external_id=$external_id&access_token=$access_token","");
 
 ?>
