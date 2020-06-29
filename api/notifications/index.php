@@ -1,7 +1,7 @@
 <?php
 
-ini_set('display_errors', 0);
-header('Content-type: application/json');
+//ini_set('display_errors', 0);
+//header('Content-type: application/json');
 include_once '../global/functions.php';
 global $access_token,$collector_id,$notificationJSON;
 
