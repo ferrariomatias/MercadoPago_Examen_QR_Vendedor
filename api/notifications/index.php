@@ -23,6 +23,9 @@ $notification = json_decode($received_json,true);
 
 $n=0;
 
+file_put_contents('php://stderr', print_r('NOTIFICACION RECIBIDA: ', true));
+file_put_contents('php://stderr', print_r($notification, true));
+
 if(isset($notification['resource'])){$resource = $notification['resource'];$n=$n+1;}else{$resource= "";}
 if(isset($notification['topic'])){$topic =$notification['topic'];$n=$n+1;}else{$topic ="";}
 
@@ -45,7 +48,7 @@ if($n==2){
 	fwrite($fp, $resource);
 	fclose($fp);
 
-	echo $resource;
+	//echo $resource;
 
 		// retorna http 200 conforme recibió bien la notificación:
 			header("HTTP/1.1 200 OK");
