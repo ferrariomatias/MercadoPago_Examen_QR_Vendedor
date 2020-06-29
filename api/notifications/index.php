@@ -35,8 +35,7 @@ if($n==2){
 	// GUARDAR LOS LA NOTIFICACIÓN EN ARCHIVO DE TEXTO
 	// ***********************************************
 
-	// retorna http 200 conforme recibió bien la notificación:
-	header("HTTP/1.1 200 OK");
+
 
 
 	// Guarda el campo resource de la notificación recibida:
@@ -48,6 +47,9 @@ if($n==2){
 	fclose($fp);
 
 	echo $resource;
+
+		// retorna http 200 conforme recibió bien la notificación:
+			header("HTTP/1.1 200 OK");
 
 
 }else{
